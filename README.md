@@ -1,5 +1,7 @@
 # One-shot object detection methods
 
+## 1. Review
+
 **Balanced and Hierarchical Relation Learning for One-shot Object Detection, CVPR 2022**
 
 https://github.com/hero-y/bhrl
@@ -13,6 +15,8 @@ Main ideas:
 Metrics:
 - PASCAL unseen: 73.8% AP
 - COCO unseen: 25.6% AP
+
+_________
 
 **SiamMask, FOC OSOD, AIT (Adaptive image transformer for one-shot object detection. CVPR, 2021)**
 
@@ -31,6 +35,8 @@ Metrics:
 - PASCAL unseen: 72.2% AP
 - COCO unseen: 24.3% AP
 
+______________________
+
 **One-shot object detection with co-attention and co-excitation. NeurIPS, 2019**
 
 https://github.com/timy90022/One-Shot-Object-Detection
@@ -45,6 +51,8 @@ Main ideas:
 Metrics:
 - PASCAL unseen: 63.8% AP
 - COCO unseen: 22.0% AP
+
+______________________
 
 **Towards improving classification power for one-shot object detection. Neurocomputing, 2021**
 
@@ -61,7 +69,9 @@ Metrics:
 - PASCAL unseen: 71.0% AP
 - COCO unseen: 17.5% AP
 
-**Simple Open-Vocabulary Object Detection with Vision Transformers, ECCV, 2022**
+_____________________
+
+**Simple Open-Vocabulary Object Detection with Vision Transformers (OWL-VIT), ECCV, 2022**
 
 https://github.com/ngthanhtin/owlvit_segment_anything
 
@@ -74,3 +84,11 @@ Main ideas:
 
 Metrics:
 - COCO: 41.8% AP
+
+Advantages: 
+ 
+ - text and image queries
+ - pre-training on large image-text examples - better generalization properties
+
+## Examples for OWL-VIT
+
