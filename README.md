@@ -4,7 +4,9 @@
 
 Main ideas: 
 - multi-level relation module IHR ( Instance-level Hierarchical Relation). It learns relation representation to highlight the complex interdependencies for query and target pairs in a hierarchical manner. Three relation levels: contrastive (between global query feature and the local target featur), salient, attention (for learning more detailed local relation)
--  RPL to solve the imbalance issue of positive-negative samples for achieving balanced and effective learning of the IHR module. It dynamically increases the weight of positive samples and decrease the weight of negative samples to retain a suitable and specific number-weighted ratio (neither too big nor too small). The too-small ratio makes the model difficult to learn from positive samples, while the too-large ratio causes overfitting. Moreover, to enhance the learning of false positives, we separate false positives from negative samples. Then, we take false positives and positive samples as a whole to increase their weights and decrease the weights of true negatives
+-  Ratio-preserving loss (RPL) to solve the imbalance issue of positive-negative samples for achieving balanced and effective learning of the IHR module. It dynamically increases the weight of positive samples and decrease the weight of negative samples to retain a suitable and specific number-weighted ratio (neither too big nor too small). The too-small ratio makes the model difficult to learn from positive samples, while the too-large ratio causes overfitting. Moreover, to enhance the learning of false positives, we separate false positives from negative samples. Then, we take false positives and positive samples as a whole to increase their weights and decrease the weights of true negatives
+
+<img src="images/bhrl.png">The architecture of the proposed method</img>
 
 Metrics:
 - PASCAL unseen: 73.8% AP
@@ -19,6 +21,8 @@ Main ideas:
 - Adaptive Image Transformer (AIT) is proposed to explore how each proposal-query pair shares common semantic attributes over the deep visual features. AIT would adaptively transform the feature map of each proposal to match the query feature via employing the learned attention mechanisms
 - Selective channel attention for better proposal ranking (enhancing the importance of channels of high similarity before evaluating a proposal-query pair) (ranking loss)
 
+<img src="images/ait2021.png">The architecture of the proposed method.  (a) Multi-head Co-Attention (MCA). (b) Adaptive Image Transformer (AIT). (c) Selective Channel Attention (SCA). In AIT, SPA: Selective Parallel Attention; FF: Feed Forward; SEDA: Selective Encoder-Decoder Attention, which replaces the original encoder-decoder attention with the intra-coder SPA.</img>
+
 Metrics: 
 - PASCAL unseen: 72.2% AP
 - COCO unseen: 24.3% AP
@@ -30,6 +34,8 @@ Main ideas:
 - Squeeze and co-excitation to emphasize those feature channels that play crucial roles in evaluating the similarity measure (query can flexibly match a candidate proposal by adaptively re-weighting the importance distribution over all channels)
 - Proposal ranking:  two-layer MLP network and margin-based ranking loss (encourage most relevant proposals to the query to appear in the top portion of the ranking list)
         
+<img src="images/2019.png">The architecture of the proposed method</img>
+
 Metrics:
 - PASCAL unseen: 63.8% AP
 - COCO unseen: 22.0% AP
