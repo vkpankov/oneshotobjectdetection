@@ -92,3 +92,25 @@ Advantages:
 
 ## Examples for OWL-VIT
 
+**Logs**:
+
+
+<img src="images/query_brevna.jpg">Query</img>
+
+<img src="images/brevna_target1.png">
+
+Target 1 and detected object</img>
+
+<img src="images/brevna_target2.png">
+
+Target 2 and detected object</img>
+
+**Pipes**:
+
+
+<img width=300 src="images/pipes_query.jpg">Query</img>
+
+<img src="images/pipes_target1.png">
+
+Target 1 and detected object</img>
+
