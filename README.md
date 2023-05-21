@@ -90,6 +90,22 @@ Advantages:
  - text and image queries
  - pre-training on large image-text examples - better generalization properties
 
+**OS2D: One-Stage One-Shot Object Detection by Matching Anchor Features**
+
+https://github.com/aosokin/os2d
+
+Main ideas:
+
+- extracting local features from both input and class images
+- correlation matching of features
+- spatially aligning features according to successful matches
+- computing the localization bounding boxes and recognition score
+
+Metrics:
+-  GroZi-3.2k: 86.1% mAP
+-  INSTRE-S2: 79.5% mAP
+
+
 ## Examples for OWL-VIT
 
 **Logs**:
@@ -114,3 +130,39 @@ Target 2 and detected object</img>
 
 Target 1 and detected object</img>
 
+## Examples for OS2D
+
+**Logs**:
+
+
+<img src="images/brevno_query2.png">
+
+Query</img>
+
+
+<img src="images/brevna_output2.png">
+
+Target 2 and detected object</img>
+
+
+**Market shelf**:
+
+
+<img width = 200 src="images/lipton_query.png">
+
+Query</img>
+
+
+<img src="images/goods_output1.png">
+
+Detected object - lipton tea</img>
+
+
+<img width = 100 src="images/goods_query.jpg">
+
+Query</img>
+
+
+<img src="images/goods_output2.png">
+
+Detected objects - tess tea</img>
