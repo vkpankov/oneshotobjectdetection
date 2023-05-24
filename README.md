@@ -1,6 +1,22 @@
 # One-shot object detection methods
 
+## 0. Datasets
+
+COCO, PASCAL
+
+Logs from roboflow: https://universe.roboflow.com/jc-pardo-medina/logs-urqa8
+
+
 ## 1. Review
+
+**Summary table**
+| Method \ Dataset | PASCAL VOC | COCO | GroZi-3.2k | INSTRE-S2 | Logs-roboflow | Pipes-roboflow |
+|------------------|------------|------|------------|-----------|------|-------|
+| BHRL             | 73.8       | 25.6 |            |           |      |       |
+| SiamMask AIT     | 72.2       | 24.3 |            |           |      |       |
+| Co-att & exc     | 63.8       | 22.0 |            |           |      |       |
+| OWL-VIT          |            | 41.8 |            |           |      |       |
+| OS2D             |            |      | 86.1       | 79.5      | 1.8% |       |
 
 **Balanced and Hierarchical Relation Learning for One-shot Object Detection, CVPR 2022**
 
