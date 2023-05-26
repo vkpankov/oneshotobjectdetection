@@ -10,7 +10,7 @@ GroZi-3.2k: 3200 retail products: https://link.springer.com/chapter/10.1007/
 978-3-319-10605-2_29
 INSTRE-S2: INSTance-level visual object REtrieval and REcognition: https://paperswithcode.com/dataset/instre)
 
-**Logs** from roboflow: https://universe.roboflow.com/koba-nanyo/wood-zay26 (queries is cropped from valid part, the rest for testing), 153 images
+**Logs** from roboflow: https://universe.roboflow.com/koba-nanyo/wood-zay26, 153 images
 
 **Pipes** from roboflow: https://universe.roboflow.com/stanns-college-of-engineering-and-technology/pipes-counting, 482 images
 
@@ -26,6 +26,7 @@ INSTRE-S2: INSTance-level visual object REtrieval and REcognition: https://paper
 | OWL-VIT image q  |            | **41.8** |            |           | 27.3% (**42.%***) | 40.6               |
 | OWL-VIT text q   |            |      |            |           | **33.7%**         | **62.8**     |
 
+Queries is cropped from validation part of logs/pipelines datasets. Tested on other part
 
 *(16.4 and 42.4): fixed query image (with better quality than cropped from dataset)
 
