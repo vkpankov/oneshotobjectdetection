@@ -2,22 +2,42 @@
 
 ## 0. Datasets
 
-COCO, PASCAL
+COCO: https://cocodataset.org
 
-Logs from roboflow: https://universe.roboflow.com/jc-pardo-medina/logs-urqa8
-Pipes from roboflow: https://universe.roboflow.com/stanns-college-of-engineering-and-technology/pipes-counting
+PASCAL voc: http://host.robots.ox.ac.uk/pascal/VOC/ 
 
+GroZi-3.2k: 3200 retail products: https://link.springer.com/chapter/10.1007/
+978-3-319-10605-2_29
+INSTRE-S2: INSTance-level visual object REtrieval and REcognition: https://paperswithcode.com/dataset/instre)
 
-## 1. Review
+**Logs** from roboflow: https://universe.roboflow.com/koba-nanyo/wood-zay26 (queries is cropped from valid part, the rest for testing), 153 images
 
-**Summary table**
+**Pipes** from roboflow: https://universe.roboflow.com/stanns-college-of-engineering-and-technology/pipes-counting, 482 images
+
+## 1. Summary
+
+**mAP:**
 | Method \ Dataset | PASCAL VOC | COCO | GroZi-3.2k | INSTRE-S2 | Logs-roboflow | Pipes-roboflow |
 |------------------|------------|------|------------|-----------|------|-------|
-| BHRL             | 73.8       | 25.6 |            |           |      |       |
-| SiamMask AIT     | 72.2       | 24.3 |            |           |      |       |
-| Co-att & exc     | 63.8       | 22.0 |            |           |      |       |
-| OWL-VIT          |            | 41.8 |            |           |      |       |
-| OS2D             |            |      | 86.1       | 79.5      | 1.8% |       |
+| BHRL             | **73.8**       | 25.6 |            |           |               |                |
+| SiamMask AIT     | 72.2       | 24.3 |            |           |               |                |
+| Co-att & exc     | 63.8       | 22.0 |            |           |               |                |
+| OS2D             |            |      | 86.1       | 79.5      | 11.5% (16.4%*) | 27.5       |
+| OWL-VIT image q  |            | **41.8** |            |           | 27.3% (**42.%***) | 40.6               |
+| OWL-VIT text q   |            |      |            |           | **33.7%**         | **62.8**     |
+
+
+*(16.4 and 42.4): fixed query image (with better quality than cropped from dataset)
+
+Text query: **wood** for logs, **[pipe, circle, hole, pipe section]** for pipes
+
+Counting with OWL-VIT:
+
+**Pipes counting median absolute error**: 8 (median count: 22)
+
+**Logs counting median absolute error**: 20 (median count: 65)
+
+## 2. Review
 
 **Balanced and Hierarchical Relation Learning for One-shot Object Detection, CVPR 2022**
 
@@ -123,44 +143,36 @@ Metrics:
 -  INSTRE-S2: 79.5% mAP
 
 
-## Examples for OWL-VIT
+## 3. Examples
 
 **Logs**:
 
 
-<img src="images/query_brevna.jpg">Query</img>
+<img width=100 src="images/query_brevna.png">
 
-<img src="images/brevna_target1.png">
+Query</img>
 
-Target 1 and detected object</img>
+<img src="images/predicted_owl.png">
 
-<img src="images/brevna_target2.png">
+Target</img>
 
-Target 2 and detected object</img>
+<img src="images/predicted_owl2.png">
+
+Target 2</img>
+
 
 **Pipes**:
 
 
-<img width=300 src="images/pipes_query.jpg">Query</img>
+<img width=100 src="images/pipes_query.png">
 
-<img src="images/pipes_target1.png">
+Query</img>
+
+<img src="images/pipes_owl.png">
 
 Target 1 and detected object</img>
 
 ## Examples for OS2D
-
-**Logs**:
-
-
-<img src="images/brevno_query2.png">
-
-Query</img>
-
-
-<img src="images/brevna_output2.png">
-
-Target 2 and detected object</img>
-
 
 **Market shelf**:
 
